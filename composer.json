@@ -12,7 +12,8 @@
     ],
     "require": {
         "php": ">=5.5",
-        "sylius/shipping": "~0.11"
+        "sylius/shipping": "~0.11",
+        "sylius/addressing": "~0.11"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.0"

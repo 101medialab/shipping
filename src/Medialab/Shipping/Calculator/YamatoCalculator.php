@@ -3,6 +3,7 @@
 namespace Medialab\Shipping\Calculator;
 
 use Medialab\Shipping\Model\Cost;
+use Sylius\Component\Addressing\Model\AddressInterface;
 use Sylius\Component\Shipping\Model\ShippableInterface;
 
 class YamatoCalculator implements CalculatorInterface
@@ -15,7 +16,7 @@ class YamatoCalculator implements CalculatorInterface
         160 => 128,
     ];
 
-    public function calculate(ShippableInterface $shippable)
+    public function calculate(AddressInterface $origin, AddressInterface $destination, ShippableInterface $shippable)
     {
         $estimatedSize = $shippable->getShippingWidth() + $shippable->getShippingHeight() + $shippable->getShippingDepth();
 
