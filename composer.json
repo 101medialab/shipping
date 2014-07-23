@@ -1,0 +1,29 @@
+{
+    "name":        "101medialab/shipping",
+    "type":        "library",
+    "description": "Shipping cost estimation library.",
+    "license":     "MIT",
+    "homepage":    "http://101medialab.com",
+    "authors": [
+        {
+            "name":     "101 Media Lab",
+            "homepage": "http://101medialab.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "sylius/shipping": "~0.11"
+    },
+    "require-dev": {
+        "phpspec/phpspec": "~2.0"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": {
+            "101medialab\\Shipping\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
