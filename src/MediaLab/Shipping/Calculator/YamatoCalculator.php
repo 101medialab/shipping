@@ -1,8 +1,8 @@
 <?php
 
-namespace Medialab\Shipping\Calculator;
+namespace MediaLab\Shipping\Calculator;
 
-use Medialab\Shipping\Model\Cost;
+use MediaLab\Shipping\Model\Cost;
 use Sylius\Component\Addressing\Model\AddressInterface;
 use Sylius\Component\Shipping\Model\ShippableInterface;
 

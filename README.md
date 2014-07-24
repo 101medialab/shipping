@@ -18,9 +18,10 @@ The recommended way to install Shipping is through composer:
 
 ```php
 /* @var Sylius\Component\Shipping\Model\ShipmentInterface $shipment */
+/* @var Sylius\Component\Addressing\Model\AddressInterface $source, $destination */
 
-$calculator = new 101medialab\Shipping\Calculator\Fedex();
-$calculator->calculate($shipment);
+$calculator = new MediaLab\Shipping\Calculator\Fedex();
+$calculator->calculate($source, $destination, $shipment);
 ```
 
 ## License

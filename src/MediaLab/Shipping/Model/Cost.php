@@ -1,6 +1,6 @@
 <?php
 
-namespace Medialab\Shipping\Model;
+namespace MediaLab\Shipping\Model;
 
 class Cost implements CostInterface
 {

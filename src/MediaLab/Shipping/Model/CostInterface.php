@@ -1,6 +1,6 @@
 <?php
 
-namespace Medialab\Shipping\Model;
+namespace MediaLab\Shipping\Model;
 
 interface CostInterface
 {

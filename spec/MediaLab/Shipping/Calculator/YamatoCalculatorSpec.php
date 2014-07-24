@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\Medialab\Shipping\Calculator;
+namespace spec\MediaLab\Shipping\Calculator;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
@@ -11,12 +11,12 @@ class YamatoCalculatorSpec extends ObjectBehavior
 {
     function it_is_initializable()
     {
-        $this->shouldHaveType('Medialab\Shipping\Calculator\YamatoCalculator');
+        $this->shouldHaveType('MediaLab\Shipping\Calculator\YamatoCalculator');
     }
 
     function it_implements_calculator_interface()
     {
-        $this->shouldHaveType('Medialab\Shipping\Calculator\CalculatorInterface');
+        $this->shouldHaveType('MediaLab\Shipping\Calculator\CalculatorInterface');
     }
 
     function it_calculates_shipping_cost_based_on_size(AddressInterface $origin, AddressInterface $destination, ShippableInterface $shippable)
@@ -26,7 +26,7 @@ class YamatoCalculatorSpec extends ObjectBehavior
         $shippable->getShippingDepth()->shouldBeCalled()->willReturn(10);
 
         $cost = $this->calculate($origin, $destination, $shippable);
-        $cost->shouldHaveType('Medialab\Shipping\Model\CostInterface');
+        $cost->shouldHaveType('MediaLab\Shipping\Model\CostInterface');
         $cost->getCurrency()->shouldReturn('HKD');
         $cost->getAmount()->shouldReturn(78);
     }
@@ -37,6 +37,6 @@ class YamatoCalculatorSpec extends ObjectBehavior
         $shippable->getShippingHeight()->shouldBeCalled()->willReturn(200);
         $shippable->getShippingDepth()->shouldBeCalled()->willReturn(10);
 
-        $this->shouldThrow('Medialab\Shipping\Calculator\CalculatorException')->duringCalculate($origin, $destination, $shippable);
+        $this->shouldThrow('MediaLab\Shipping\Calculator\CalculatorException')->duringCalculate($origin, $destination, $shippable);
     }
 }
