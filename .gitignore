@@ -1,2 +1,3 @@
 bin/phpspec
+examples/config.php
 vendor

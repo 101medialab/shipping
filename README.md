@@ -20,7 +20,7 @@ The recommended way to install Shipping is through composer:
 /* @var Sylius\Component\Shipping\Model\ShipmentInterface $shipment */
 /* @var Sylius\Component\Addressing\Model\AddressInterface $source, $destination */
 
-$calculator = new MediaLab\Shipping\Calculator\Fedex();
+$calculator = new MediaLab\Shipping\Calculator\FedExCalculator($key, $password, $accountNumber, $meterNumber);
 $calculator->calculate($source, $destination, $shipment);
 ```
 

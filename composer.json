@@ -10,13 +10,22 @@
             "homepage": "http://101medialab.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/JeremyDunn/php-fedex-api-wrapper"
+        }
+    ],
     "require": {
         "php": ">=5.5",
         "sylius/shipping": "~0.11",
-        "sylius/addressing": "~0.11"
+        "sylius/addressing": "~0.11",
+        "jeremy-dunn/php-fedex-api-wrapper": "dev-master"
     },
     "require-dev": {
-        "phpspec/phpspec": "~2.0"
+        "phpspec/phpspec": "~2.0",
+        "fzaninotto/faker": "~1.5",
+        "sylius/core": "~0.11"
     },
     "config": {
         "bin-dir": "bin"
@@ -24,6 +33,11 @@
     "autoload": {
         "psr-0": {
             "MediaLab\\Shipping\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
         }
     },
     "minimum-stability": "dev"
