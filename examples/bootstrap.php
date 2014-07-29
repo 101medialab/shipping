@@ -51,7 +51,7 @@ $destination = (new Sylius\Component\Addressing\Model\Address())
 
 $shippable = (new Sylius\Component\Core\Model\ProductVariant())
     ->setWeight($faker->numberBetween(1, 10))
-    ->setWidth($faker->numberBetween(10, 100))
-    ->setHeight($faker->numberBetween(10, 100))
-    ->setDepth($faker->numberBetween(10, 100))
+    ->setWidth($faker->numberBetween(1, 10))
+    ->setHeight($faker->numberBetween(1, 100))
+    ->setDepth($faker->numberBetween(1, 10))
 ;

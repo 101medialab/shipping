@@ -6,7 +6,9 @@ use Sylius\Component\Addressing\Model\AddressInterface;
 use Sylius\Component\Shipping\Model\ShippableInterface;
 use FedEx\RateService\Request;
 use MediaLab\Shipping\FedEx\Model\Factory;
+use MediaLab\Shipping\Model\Estimation;
 use MediaLab\Shipping\Model\Cost;
+use DateTime;
 
 class FedExCalculator implements CalculatorInterface
 {
@@ -50,17 +52,33 @@ class FedExCalculator implements CalculatorInterface
             throw new CalculatorException($message);
         }
 
+        $estimations = [];
         foreach ($result->RateReplyDetails as $rateReplyDetails) {
-            if ('FEDEX_GROUND' !== $rateReplyDetails->ServiceType) {
-                continue;
+            foreach ($rateReplyDetails->RatedShipmentDetails as $rateShipmentDetails) {
+                if (isset($rateShipmentDetails->TotalBaseCharge)) {
+                    $charge = $rateShipmentDetails->TotalBaseCharge;
+                } elseif (isset($rateShipmentDetails->ShipmentRateDetail)) {
+                    $charge = $rateShipmentDetails->ShipmentRateDetail->TotalBaseCharge;
+                } elseif (isset($rateShipmentDetails->PackageRateDetail)) {
+                    $charge = $rateShipmentDetails->PackageRateDetail->BaseCharge;
+                } else {
+                    throw new CalculatorException('Failed to extract shipping cost.');
+                }
+
+                $estimations[] = (new Estimation())
+                    ->setCarrier('FedEx')
+                    ->setServiceName('FedEx')
+                    ->setServiceCode($rateReplyDetails->ServiceType)
+                    ->setDeliveryDate(isset($rateReplyDetails->DeliveryTimestamp) ? new DateTime($rateReplyDetails->DeliveryTimestamp) : null)
+                    ->setCost((new Cost())
+                        ->setCurrency($charge->Currency)
+                        ->setAmount($charge->Amount)
+                    )
+                ;
+
             }
         }
 
-        $cost = $rateReplyDetails->RatedShipmentDetails->ShipmentRateDetail->TotalBaseCharge;
-
-        return (new Cost())
-            ->setCurrency($cost->Currency)
-            ->setAmount($cost->Amount)
-        ;
+        return $estimations;
     }
 }

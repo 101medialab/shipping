@@ -2,6 +2,7 @@
 
 namespace MediaLab\Shipping\Calculator;
 
+use MediaLab\Shipping\Model\Estimation;
 use MediaLab\Shipping\Model\Cost;
 use Sylius\Component\Addressing\Model\AddressInterface;
 use Sylius\Component\Shipping\Model\ShippableInterface;
@@ -35,10 +36,15 @@ class YamatoCalculator implements CalculatorInterface
 
         foreach ($this->rates as $size => $rate) {
             if ($estimatedSize <= $size) {
-                return (new Cost())
-                    ->setCurrency('HKD')
-                    ->setAmount($rate)
-                ;
+                return [(new Estimation)
+                    ->setCarrier('Yamato')
+                    ->setServiceName('Yamato')
+                    ->setServiceCode('YAMATO')
+                    ->setCost((new Cost())
+                        ->setCurrency('HKD')
+                        ->setAmount($rate)
+                    )
+                ];
             }
         }
 
