@@ -2,6 +2,8 @@
 
 Shipping cost estimation library.
 
+[![Build Status](https://travis-ci.org/101medialab/shipping.png?branch=master)](https://travis-ci.org/101medialab/shipping)
+
 ## Installation
 
 The recommended way to install Shipping is through composer:
