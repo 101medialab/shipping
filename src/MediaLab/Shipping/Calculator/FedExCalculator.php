@@ -56,10 +56,10 @@ class FedExCalculator implements CalculatorInterface
         $estimations = [];
         foreach ($result->RateReplyDetails as $rateReplyDetails) {
             foreach ($rateReplyDetails->RatedShipmentDetails as $rateShipmentDetails) {
-                if (isset($rateShipmentDetails->TotalBaseCharge)) {
-                    $charge = $rateShipmentDetails->TotalBaseCharge;
+                if (isset($rateShipmentDetails->TotalNetCharge)) {
+                    $charge = $rateShipmentDetails->TotalNetCharge;
                 } elseif (isset($rateShipmentDetails->ShipmentRateDetail)) {
-                    $charge = $rateShipmentDetails->ShipmentRateDetail->TotalBaseCharge;
+                    $charge = $rateShipmentDetails->ShipmentRateDetail->TotalNetCharge;
                 } elseif (isset($rateShipmentDetails->PackageRateDetail)) {
                     $charge = $rateShipmentDetails->PackageRateDetail->BaseCharge;
                 } else {
