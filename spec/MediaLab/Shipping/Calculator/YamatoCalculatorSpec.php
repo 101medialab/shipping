@@ -25,7 +25,11 @@ class YamatoCalculatorSpec extends ObjectBehavior
         $shippable->getShippingHeight()->shouldBeCalled()->willReturn(100);
         $shippable->getShippingDepth()->shouldBeCalled()->willReturn(10);
 
-        $cost = $this->calculate($origin, $destination, $shippable);
+        $estimations = $this->calculate($origin, $destination, $shippable);
+        $estimations->shouldHaveCount(1);
+        $estimation = $estimations[0];
+        $estimation->shouldHaveType('MediaLab\Shipping\Model\EstimationInterface');
+        $cost = $estimation->getCost();
         $cost->shouldHaveType('MediaLab\Shipping\Model\CostInterface');
         $cost->getCurrency()->shouldReturn('HKD');
         $cost->getAmount()->shouldReturn(78);

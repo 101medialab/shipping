@@ -57,13 +57,20 @@ class FedExCalculator implements CalculatorInterface
         foreach ($result->RateReplyDetails as $rateReplyDetails) {
             foreach ($rateReplyDetails->RatedShipmentDetails as $rateShipmentDetails) {
                 if (isset($rateShipmentDetails->TotalNetCharge)) {
-                    $charge = $rateShipmentDetails->TotalNetCharge;
+                    $details = $rateShipmentDetails;
+                    $charge = $details->TotalNetCharge;
                 } elseif (isset($rateShipmentDetails->ShipmentRateDetail)) {
-                    $charge = $rateShipmentDetails->ShipmentRateDetail->TotalNetCharge;
+                    $details = $rateShipmentDetails->ShipmentRateDetail;
+                    $charge = $details->TotalNetCharge;
                 } elseif (isset($rateShipmentDetails->PackageRateDetail)) {
-                    $charge = $rateShipmentDetails->PackageRateDetail->BaseCharge;
+                    $details = $rateShipmentDetails->PackageRateDetail;
+                    $charge = $details->NetCharge;
                 } else {
                     throw new CalculatorException('Failed to extract shipping cost.');
+                }
+
+                if ('RATED_ACCOUNT_PACKAGE' !== $details->RateType) {
+                    continue;
                 }
 
                 $estimations[] = (new Estimation())
