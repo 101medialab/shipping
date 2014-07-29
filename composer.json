@@ -20,7 +20,8 @@
         "php": ">=5.5",
         "sylius/shipping": "~0.11",
         "sylius/addressing": "~0.11",
-        "jeremy-dunn/php-fedex-api-wrapper": "dev-master"
+        "jeremy-dunn/php-fedex-api-wrapper": "dev-master",
+        "icanboogie/inflector": "1.2"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.0",

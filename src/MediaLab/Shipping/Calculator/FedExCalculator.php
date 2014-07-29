@@ -5,10 +5,11 @@ namespace MediaLab\Shipping\Calculator;
 use Sylius\Component\Addressing\Model\AddressInterface;
 use Sylius\Component\Shipping\Model\ShippableInterface;
 use FedEx\RateService\Request;
+use ICanBoogie\Inflector;
+use DateTime;
 use MediaLab\Shipping\FedEx\Model\Factory;
 use MediaLab\Shipping\Model\Estimation;
 use MediaLab\Shipping\Model\Cost;
-use DateTime;
 
 class FedExCalculator implements CalculatorInterface
 {
@@ -67,7 +68,7 @@ class FedExCalculator implements CalculatorInterface
 
                 $estimations[] = (new Estimation())
                     ->setCarrier('FedEx')
-                    ->setServiceName('FedEx')
+                    ->setServiceName(Inflector::get()->humanize($rateReplyDetails->ServiceType))
                     ->setServiceCode($rateReplyDetails->ServiceType)
                     ->setDeliveryDate(isset($rateReplyDetails->DeliveryTimestamp) ? new DateTime($rateReplyDetails->DeliveryTimestamp) : null)
                     ->setCost((new Cost())
