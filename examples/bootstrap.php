@@ -5,24 +5,6 @@ require_once 'config.php';
 
 $faker = Faker\Factory::create();
 
-// $source = (new Sylius\Component\Addressing\Model\Address())
-//     ->setStreet($faker->streetAddress)
-//     ->setCity($faker->city)
-//     ->setPostcode($faker->postcode)
-//     ->setCountry((new Sylius\Component\Addressing\Model\Country())
-//         ->setIsoName($faker->countryCode)
-//     )
-// ;
-
-// $destination = (new Sylius\Component\Addressing\Model\Address())
-//     ->setStreet($faker->streetAddress)
-//     ->setCity($faker->city)
-//     ->setPostcode($faker->postcode)
-//     ->setCountry((new Sylius\Component\Addressing\Model\Country())
-//         ->setIsoName($faker->countryCode)
-//     )
-// ;
-
 $source = (new Sylius\Component\Addressing\Model\Address())
     ->setStreet('10 Fed Ex Pkwy')
     ->setCity('Memphis')

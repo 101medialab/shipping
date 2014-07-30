@@ -4,11 +4,10 @@ namespace MediaLab\Shipping\Calculator;
 
 use Sylius\Component\Addressing\Model\AddressInterface;
 use Sylius\Component\Shipping\Model\ShippableInterface;
-use MediaLab\Shipping\SFExpress\Client;
 use DateTime;
 use MediaLab\Shipping\Model\Estimation;
 use MediaLab\Shipping\Model\Cost;
-use Guzzle\Http\Exception\ClientErrorResponseException;
+use MediaLab\Shipping\SFExpress\Client;
 
 class SFExpressCalculator implements CalculatorInterface
 {
@@ -52,8 +51,7 @@ class SFExpressCalculator implements CalculatorInterface
     {
         $provinceName = null === $address->getProvince() ? null : $address->getProvince()->getName();
 
-        foreach ($this->getRegions('A000000000') as $region) {
-            // TODO: take country into account
+        foreach ($this->getRegions() as $region) {
             if ($provinceName === $region['name']) {
                 return $region['code'];
             }
@@ -66,21 +64,8 @@ class SFExpressCalculator implements CalculatorInterface
         ));
     }
 
-    private function getRegions($code)
+    private function getRegions()
     {
-        try {
-            $regions = $this->client->getSubregions($code);
-        } catch (ClientErrorResponseException $e) {
-            return [];
-        }
-
-        foreach ($regions as $region) {
-            if (null === $region['name']) {
-                continue;
-            }
-            $regions = array_merge($regions, $this->getRegions($region['code']));
-        }
-
-        return $regions;
+        return unserialize(file_get_contents(__DIR__.'../../../../../data/regions.data'));
     }
 }
