@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cc63c84ad3fef58ac2edd4a5bcd6c865",
+    "hash": "3780c898a48082a377073585e6c2c5ca",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -432,6 +432,103 @@
             "time": "2014-06-11 23:09:27"
         },
         {
+            "name": "icanboogie/inflector",
+            "version": "v1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ICanBoogie/Inflector.git",
+                "reference": "4da987927650acb4242d35b27223ec0d55977919"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ICanBoogie/Inflector/zipball/4da987927650acb4242d35b27223ec0d55977919",
+                "reference": "4da987927650acb4242d35b27223ec0d55977919",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib/"
+                ],
+                "files": [
+                    "lib/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Olivier Laviale",
+                    "email": "olivier.laviale@gmail.com",
+                    "homepage": "http://www.weirdog.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The Inflector transforms words from singular to plural, underscore to camel case, titelize words and more.",
+            "homepage": "http://icanboogie.org/",
+            "keywords": [
+                "camelize",
+                "hyphenate",
+                "inflect",
+                "pluralize",
+                "singularize",
+                "underscore"
+            ],
+            "time": "2014-01-03 11:19:15"
+        },
+        {
+            "name": "jeremy-dunn/php-fedex-api-wrapper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JeremyDunn/php-fedex-api-wrapper.git",
+                "reference": "3aa5518f18ec89d4f688d7908cd4246d006e177e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JeremyDunn/php-fedex-api-wrapper/zipball/3aa5518f18ec89d4f688d7908cd4246d006e177e",
+                "reference": "3aa5518f18ec89d4f688d7908cd4246d006e177e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/console": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "FedEx": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Dunn",
+                    "email": "jeremy@jsdunn.info",
+                    "homepage": "http://www.jsdunn.info"
+                }
+            ],
+            "description": "API Wrapper for Fedex web services",
+            "homepage": "https://github.com/JeremyDunn/php-fedex-api-wrapper",
+            "keywords": [
+                "fedex",
+                "shipping",
+                "soap"
+            ],
+            "support": {
+                "source": "https://github.com/JeremyDunn/php-fedex-api-wrapper/tree/master",
+                "issues": "https://github.com/JeremyDunn/php-fedex-api-wrapper/issues"
+            },
+            "time": "2014-07-25 18:52:23"
+        },
+        {
             "name": "sylius/addressing",
             "version": "dev-master",
             "source": {
@@ -625,6 +722,63 @@
             "time": "2014-06-28 15:05:52"
         },
         {
+            "name": "symfony/console",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Console",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Console.git",
+                "reference": "a61d4fb086e33c3b45c80b638fb915c62eac58a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/a61d4fb086e33c3b45c80b638fb915c62eac58a3",
+                "reference": "a61d4fb086e33c3b45c80b638fb915c62eac58a3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "psr/log": "~1.0",
+                "symfony/event-dispatcher": "~2.1",
+                "symfony/process": "~2.1"
+            },
+            "suggest": {
+                "psr/log": "For using the console logger",
+                "symfony/event-dispatcher": "",
+                "symfony/process": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.6-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Console\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                }
+            ],
+            "description": "Symfony Console Component",
+            "homepage": "http://symfony.com",
+            "time": "2014-07-20 19:24:23"
+        },
+        {
             "name": "symfony/event-dispatcher",
             "version": "dev-master",
             "target-dir": "Symfony/Component/EventDispatcher",
@@ -690,12 +844,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/expression-language.git",
-                "reference": "4a23702a8e0a3fe2f07f360d36aa1e13199a3241"
+                "reference": "849663d7134921a05df8cb6c976e0159c892c262"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/expression-language/zipball/4a23702a8e0a3fe2f07f360d36aa1e13199a3241",
-                "reference": "4a23702a8e0a3fe2f07f360d36aa1e13199a3241",
+                "url": "https://api.github.com/repos/symfony/expression-language/zipball/849663d7134921a05df8cb6c976e0159c892c262",
+                "reference": "849663d7134921a05df8cb6c976e0159c892c262",
                 "shasum": ""
             },
             "require": {
@@ -718,19 +872,17 @@
             ],
             "authors": [
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com",
-                    "homepage": "http://fabien.potencier.org",
-                    "role": "Lead Developer"
-                },
-                {
                     "name": "Symfony Community",
                     "homepage": "http://symfony.com/contributors"
+                },
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
                 }
             ],
             "description": "Symfony ExpressionLanguage Component",
             "homepage": "http://symfony.com",
-            "time": "2014-05-23 14:36:49"
+            "time": "2014-07-24 17:03:35"
         },
         {
             "name": "symfony/options-resolver",
@@ -898,6 +1050,138 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "fzaninotto/faker",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fzaninotto/Faker.git",
+                "reference": "c48f30549b1ec508a74141a833757ca1e0d9ca53"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/c48f30549b1ec508a74141a833757ca1e0d9ca53",
+                "reference": "c48f30549b1ec508a74141a833757ca1e0d9ca53",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.5.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Faker": "src/",
+                    "Faker\\PHPUnit": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "François Zaninotto"
+                }
+            ],
+            "description": "Faker is a PHP library that generates fake data for you.",
+            "keywords": [
+                "data",
+                "faker",
+                "fixtures"
+            ],
+            "time": "2014-07-17 07:25:43"
+        },
+        {
+            "name": "knplabs/gaufrette",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/Gaufrette.git",
+                "reference": "b243f8f3ea535b7f080d51be5cc98a3f72c0b627"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/Gaufrette/zipball/b243f8f3ea535b7f080d51be5cc98a3f72c0b627",
+                "reference": "b243f8f3ea535b7f080d51be5cc98a3f72c0b627",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "amazonwebservices/aws-sdk-for-php": "1.5.*",
+                "aws/aws-sdk-php": "~2",
+                "doctrine/dbal": ">=2.3",
+                "dropbox-php/dropbox-php": "*",
+                "herzult/php-ssh": "*",
+                "microsoft/windowsazure": "dev-master",
+                "mikey179/vfsstream": "~1.2.0",
+                "phpseclib/phpseclib": "dev-master",
+                "phpspec/phpspec": "2.0.*",
+                "phpunit/phpunit": "3.7.*",
+                "rackspace/php-opencloud": "1.9.*"
+            },
+            "suggest": {
+                "amazonwebservices/aws-sdk-for-php": "to use the legacy Amazon S3 adapters",
+                "aws/aws-sdk-php": "to use the Amazon S3 adapter",
+                "doctrine/dbal": "to use the Doctrine DBAL adapter",
+                "dropbox-php/dropbox-php": "to use the Dropbox adapter",
+                "ext-apc": "to use the APC adapter",
+                "ext-curl": "*",
+                "ext-fileinfo": "This extension is used to automatically detect the content-type of a file in the AwsS3, OpenCloud, and AzureBlogStorage adapters",
+                "ext-mbstring": "*",
+                "ext-mongo": "*",
+                "ext-zip": "to use the Zip adapter",
+                "herzult/php-ssh": "to use SFtp adapter",
+                "knplabs/knp-gaufrette-bundle": "to use with Symfony2",
+                "microsoft/windowsazure": "to use Microsoft Azure Blob Storage adapter",
+                "phpseclib/phpseclib": "to use PhpseclibSftp adapter",
+                "rackspace/php-opencloud": "to use Opencloud adapter"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.2.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Gaufrette": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "The contributors",
+                    "homepage": "http://github.com/knplabs/Gaufrette/contributors"
+                },
+                {
+                    "name": "KnpLabs Team",
+                    "homepage": "http://knplabs.com"
+                }
+            ],
+            "description": "PHP5 library that provides a filesystem abstraction layer",
+            "homepage": "http://knplabs.com",
+            "keywords": [
+                "abstraction",
+                "file",
+                "filesystem",
+                "media"
+            ],
+            "time": "2014-06-24 08:35:18"
+        },
         {
             "name": "phpdocumentor/reflection-docblock",
             "version": "dev-master",
@@ -1114,42 +1398,35 @@
             "time": "2014-07-18 21:26:55"
         },
         {
-            "name": "symfony/console",
+            "name": "sylius/attribute",
             "version": "dev-master",
-            "target-dir": "Symfony/Component/Console",
             "source": {
                 "type": "git",
-                "url": "https://github.com/symfony/Console.git",
-                "reference": "a61d4fb086e33c3b45c80b638fb915c62eac58a3"
+                "url": "https://github.com/Sylius/Attribute.git",
+                "reference": "f514193f5ea8f581bc4a1385a4d00b6fed641097"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/a61d4fb086e33c3b45c80b638fb915c62eac58a3",
-                "reference": "a61d4fb086e33c3b45c80b638fb915c62eac58a3",
+                "url": "https://api.github.com/repos/Sylius/Attribute/zipball/f514193f5ea8f581bc4a1385a4d00b6fed641097",
+                "reference": "f514193f5ea8f581bc4a1385a4d00b6fed641097",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.3",
+                "sylius/resource": "0.11.*@dev"
             },
             "require-dev": {
-                "psr/log": "~1.0",
-                "symfony/event-dispatcher": "~2.1",
-                "symfony/process": "~2.1"
-            },
-            "suggest": {
-                "psr/log": "For using the console logger",
-                "symfony/event-dispatcher": "",
-                "symfony/process": ""
+                "phpspec/phpspec": "~2.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6-dev"
+                    "dev-master": "0.11-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Symfony\\Component\\Console\\": ""
+                "psr-4": {
+                    "Sylius\\Component\\Attribute\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1158,17 +1435,980 @@
             ],
             "authors": [
                 {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
+                    "name": "Paweł Jędrzejewski",
+                    "email": "pjedrzejewski@diweb.pl",
+                    "homepage": "http://pjedrzejewski.com"
                 },
                 {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
+                    "name": "Sylius project",
+                    "homepage": "http://sylius.org"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "http://github.com/Sylius/Sylius/contributors"
                 }
             ],
-            "description": "Symfony Console Component",
-            "homepage": "http://symfony.com",
-            "time": "2014-07-20 19:24:23"
+            "description": "Component for handling object attributes in PHP projects.",
+            "homepage": "http://sylius.org",
+            "keywords": [
+                "attribute",
+                "ecommerce",
+                "feature",
+                "shop"
+            ],
+            "time": "2014-06-28 15:05:52"
+        },
+        {
+            "name": "sylius/cart",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sylius/Cart.git",
+                "reference": "389cc32c57d330c11c6872c2436a459bb788e647"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sylius/Cart/zipball/389cc32c57d330c11c6872c2436a459bb788e647",
+                "reference": "389cc32c57d330c11c6872c2436a459bb788e647",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sylius/order": "0.11.*@dev",
+                "sylius/resource": "0.11.*@dev"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sylius\\Component\\Cart\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Jędrzejewski",
+                    "email": "pjedrzejewski@diweb.pl",
+                    "homepage": "http://pjedrzejewski.com"
+                },
+                {
+                    "name": "Sylius project",
+                    "homepage": "http://sylius.org"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "http://github.com/Sylius/Sylius/contributors"
+                }
+            ],
+            "description": "Cart engine for PHP applications.",
+            "homepage": "http://sylius.org",
+            "keywords": [
+                "cart",
+                "carts",
+                "ecommerce",
+                "shop",
+                "sylius"
+            ],
+            "time": "2014-06-28 15:05:52"
+        },
+        {
+            "name": "sylius/core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sylius/Core.git",
+                "reference": "9a9031e11a19d772d7fdb7d4f09734cb721a856b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sylius/Core/zipball/9a9031e11a19d772d7fdb7d4f09734cb721a856b",
+                "reference": "9a9031e11a19d772d7fdb7d4f09734cb721a856b",
+                "shasum": ""
+            },
+            "require": {
+                "knplabs/gaufrette": "*@dev",
+                "php": ">=5.3.3",
+                "sylius/addressing": "0.11.*@dev",
+                "sylius/cart": "0.11.*@dev",
+                "sylius/currency": "0.11.*@dev",
+                "sylius/inventory": "0.11.*@dev",
+                "sylius/locale": "0.11.*@dev",
+                "sylius/order": "0.11.*@dev",
+                "sylius/payment": "0.11.*@dev",
+                "sylius/pricing": "0.11.*@dev",
+                "sylius/product": "0.11.*@dev",
+                "sylius/promotion": "0.11.*@dev",
+                "sylius/resource": "0.11.*@dev",
+                "sylius/shipping": "0.11.*@dev",
+                "sylius/taxation": "0.11.*@dev",
+                "sylius/taxonomy": "0.11.*@dev"
+            },
+            "require-dev": {
+                "friendsofsymfony/user-bundle": "2.0.*@dev",
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sylius\\Component\\Core\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Jędrzejewski",
+                    "email": "pjedrzejewski@diweb.pl",
+                    "homepage": "http://pjedrzejewski.com"
+                },
+                {
+                    "name": "Sylius project",
+                    "homepage": "http://sylius.org"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "http://github.com/Sylius/Sylius/contributors"
+                }
+            ],
+            "description": "Sylius e-commerce core. It integrates all components.",
+            "homepage": "http://sylius.org",
+            "keywords": [
+                "core",
+                "ecommerce",
+                "shop",
+                "store",
+                "sylius"
+            ],
+            "time": "2014-07-17 11:54:35"
+        },
+        {
+            "name": "sylius/currency",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sylius/Currency.git",
+                "reference": "62e787cb53a89d1302d6c39dd055f2f112b62668"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sylius/Currency/zipball/62e787cb53a89d1302d6c39dd055f2f112b62668",
+                "reference": "62e787cb53a89d1302d6c39dd055f2f112b62668",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sylius/resource": "0.11.*@dev"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sylius\\Component\\Currency\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Jędrzejewski",
+                    "email": "pjedrzejewski@diweb.pl",
+                    "homepage": "http://pjedrzejewski.com"
+                },
+                {
+                    "name": "Sylius project",
+                    "homepage": "http://sylius.org"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "http://github.com/Sylius/Sylius/contributors"
+                }
+            ],
+            "description": "Currency handling for PHP applications.",
+            "homepage": "http://sylius.org",
+            "keywords": [
+                "cash",
+                "currencies",
+                "currency",
+                "money"
+            ],
+            "time": "2014-06-28 15:18:46"
+        },
+        {
+            "name": "sylius/inventory",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sylius/Inventory.git",
+                "reference": "a1e56fc551e2753321fbc8b3b56ea947399cbde6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sylius/Inventory/zipball/a1e56fc551e2753321fbc8b3b56ea947399cbde6",
+                "reference": "a1e56fc551e2753321fbc8b3b56ea947399cbde6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sylius/resource": "0.11.*@dev"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sylius\\Component\\Inventory\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Jędrzejewski",
+                    "email": "pjedrzejewski@diweb.pl",
+                    "homepage": "http://pjedrzejewski.com"
+                },
+                {
+                    "name": "Sylius project",
+                    "homepage": "http://sylius.org"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "http://github.com/Sylius/Sylius/contributors"
+                }
+            ],
+            "description": "Flexible inventory management for PHP applications.",
+            "homepage": "http://sylius.org",
+            "keywords": [
+                "ecommerce",
+                "inventory",
+                "shop",
+                "stock",
+                "sylius"
+            ],
+            "time": "2014-06-28 15:05:52"
+        },
+        {
+            "name": "sylius/locale",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sylius/Locale.git",
+                "reference": "af96816f3cd399defe71598aab055263feba836d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sylius/Locale/zipball/af96816f3cd399defe71598aab055263feba836d",
+                "reference": "af96816f3cd399defe71598aab055263feba836d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sylius/resource": "0.11.*@dev"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sylius\\Component\\Locale\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Jędrzejewski",
+                    "email": "pjedrzejewski@diweb.pl",
+                    "homepage": "http://pjedrzejewski.com"
+                },
+                {
+                    "name": "Sylius project",
+                    "homepage": "http://sylius.org"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "http://github.com/Sylius/Sylius/contributors"
+                }
+            ],
+            "description": "Locale handling for PHP applications.",
+            "homepage": "http://sylius.org",
+            "keywords": [
+                "i18n",
+                "internationalization",
+                "language",
+                "locale",
+                "localization"
+            ],
+            "time": "2014-07-08 09:50:18"
+        },
+        {
+            "name": "sylius/order",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sylius/Order.git",
+                "reference": "8b0c006deb138b165cdcbdd2129383c009b9fc2b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sylius/Order/zipball/8b0c006deb138b165cdcbdd2129383c009b9fc2b",
+                "reference": "8b0c006deb138b165cdcbdd2129383c009b9fc2b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sylius/resource": "0.11.*@dev",
+                "sylius/sequence": "0.11.*@dev"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sylius\\Component\\Order\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Jędrzejewski",
+                    "email": "pjedrzejewski@diweb.pl",
+                    "homepage": "http://pjedrzejewski.com"
+                },
+                {
+                    "name": "Sylius project",
+                    "homepage": "http://sylius.org"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "http://github.com/Sylius/Sylius/contributors"
+                }
+            ],
+            "description": "Orders management library for PHP.",
+            "homepage": "http://sylius.org",
+            "keywords": [
+                "ecommerce",
+                "order",
+                "sales",
+                "shop",
+                "webshop"
+            ],
+            "time": "2014-06-28 15:05:52"
+        },
+        {
+            "name": "sylius/payment",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sylius/Payment.git",
+                "reference": "ab1fd87137d6ac5800f3028a73b9237e3637b946"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sylius/Payment/zipball/ab1fd87137d6ac5800f3028a73b9237e3637b946",
+                "reference": "ab1fd87137d6ac5800f3028a73b9237e3637b946",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sylius/resource": "0.11.*@dev"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sylius\\Component\\Payment\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Jędrzejewski",
+                    "email": "pjedrzejewski@diweb.pl",
+                    "homepage": "http://pjedrzejewski.com"
+                },
+                {
+                    "name": "Sylius project",
+                    "homepage": "http://sylius.org"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "http://github.com/Sylius/Sylius/contributors"
+                }
+            ],
+            "description": "Flexible payments system for PHP e-commerce applications.",
+            "homepage": "http://sylius.org",
+            "keywords": [
+                "ecommerce",
+                "payment",
+                "payments",
+                "shop",
+                "webshop"
+            ],
+            "time": "2014-06-28 15:05:52"
+        },
+        {
+            "name": "sylius/pricing",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sylius/Pricing.git",
+                "reference": "84aae727a6d430171e9fbe73986fc0567baf27d5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sylius/Pricing/zipball/84aae727a6d430171e9fbe73986fc0567baf27d5",
+                "reference": "84aae727a6d430171e9fbe73986fc0567baf27d5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sylius/registry": "0.11.*@dev",
+                "sylius/resource": "0.11.*@dev"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sylius\\Component\\Pricing\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Jędrzejewski",
+                    "email": "pjedrzejewski@diweb.pl",
+                    "homepage": "http://pjedrzejewski.com"
+                },
+                {
+                    "name": "Sylius project",
+                    "homepage": "http://sylius.org"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "http://github.com/Sylius/Sylius/contributors"
+                }
+            ],
+            "description": "Pricing component for PHP e-commerce applications.",
+            "homepage": "http://sylius.org",
+            "keywords": [
+                "ecommerce",
+                "price",
+                "pricing",
+                "shop"
+            ],
+            "time": "2014-06-28 15:05:52"
+        },
+        {
+            "name": "sylius/product",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sylius/Product.git",
+                "reference": "668cb48cd8ea0b570a6541074e8c9be744b71415"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sylius/Product/zipball/668cb48cd8ea0b570a6541074e8c9be744b71415",
+                "reference": "668cb48cd8ea0b570a6541074e8c9be744b71415",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sylius/attribute": "0.11.*@dev",
+                "sylius/resource": "0.11.*@dev",
+                "sylius/variation": "0.11.*@dev"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sylius\\Component\\Product\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Jędrzejewski",
+                    "email": "pjedrzejewski@diweb.pl",
+                    "homepage": "http://pjedrzejewski.com"
+                },
+                {
+                    "name": "Sylius project",
+                    "homepage": "http://sylius.org"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "http://github.com/Sylius/Sylius/contributors"
+                }
+            ],
+            "description": "Product catalog system with support for product options and variants.",
+            "homepage": "http://sylius.org",
+            "keywords": [
+                "assortment",
+                "ecommerce",
+                "options",
+                "product",
+                "products",
+                "shop",
+                "variants"
+            ],
+            "time": "2014-06-28 15:05:52"
+        },
+        {
+            "name": "sylius/promotion",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sylius/Promotion.git",
+                "reference": "78535fb52db452cd7fbc90b1307845a6e7f54f55"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sylius/Promotion/zipball/78535fb52db452cd7fbc90b1307845a6e7f54f55",
+                "reference": "78535fb52db452cd7fbc90b1307845a6e7f54f55",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sylius/registry": "0.11.*@dev",
+                "sylius/resource": "0.11.*@dev"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sylius\\Component\\Promotion\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Jędrzejewski",
+                    "email": "pjedrzejewski@diweb.pl",
+                    "homepage": "http://pjedrzejewski.com"
+                },
+                {
+                    "name": "Sylius project",
+                    "homepage": "http://sylius.org"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "http://github.com/Sylius/Sylius/contributors"
+                }
+            ],
+            "description": "Flexible promotion management for PHP applications.",
+            "homepage": "http://sylius.org",
+            "keywords": [
+                "ecommerce",
+                "promotion",
+                "shop",
+                "sylius"
+            ],
+            "time": "2014-07-10 14:25:55"
+        },
+        {
+            "name": "sylius/registry",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sylius/Registry.git",
+                "reference": "eee203ebdc61c08a7d565c0fba93f3ca589d85d2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sylius/Registry/zipball/eee203ebdc61c08a7d565c0fba93f3ca589d85d2",
+                "reference": "eee203ebdc61c08a7d565c0fba93f3ca589d85d2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sylius\\Component\\Registry\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Jędrzejewski",
+                    "email": "pjedrzejewski@diweb.pl",
+                    "homepage": "http://pjedrzejewski.com"
+                },
+                {
+                    "name": "Sylius project",
+                    "homepage": "http://sylius.org"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "http://github.com/Sylius/Sylius/contributors"
+                }
+            ],
+            "description": "Services registry.",
+            "homepage": "http://sylius.org",
+            "keywords": [
+                "registry",
+                "services"
+            ],
+            "time": "2014-06-28 15:05:52"
+        },
+        {
+            "name": "sylius/sequence",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sylius/Sequence.git",
+                "reference": "e0507034a0da03f72e6765e839c86690eecf6b58"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sylius/Sequence/zipball/e0507034a0da03f72e6765e839c86690eecf6b58",
+                "reference": "e0507034a0da03f72e6765e839c86690eecf6b58",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sylius/registry": "0.11.*@dev",
+                "sylius/resource": "0.11.*@dev"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "2.0.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sylius\\Component\\Sequence\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Jędrzejewski",
+                    "email": "pjedrzejewski@diweb.pl",
+                    "homepage": "http://pjedrzejewski.com"
+                },
+                {
+                    "name": "Sylius project",
+                    "homepage": "http://sylius.org"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "http://github.com/Sylius/Sylius/contributors"
+                },
+                {
+                    "name": "Alexandre Bacco",
+                    "email": "alexandre.bacco@gmail.com",
+                    "homepage": "http://alex.bacco.fr"
+                }
+            ],
+            "description": "Component for handling sequences in PHP projects.",
+            "homepage": "http://sylius.org",
+            "keywords": [
+                "ecommerce",
+                "feature",
+                "sequence",
+                "shop"
+            ],
+            "time": "2014-06-28 15:05:52"
+        },
+        {
+            "name": "sylius/taxation",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sylius/Taxation.git",
+                "reference": "93542ded8c3faa019775db016a97b4432ae5f45e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sylius/Taxation/zipball/93542ded8c3faa019775db016a97b4432ae5f45e",
+                "reference": "93542ded8c3faa019775db016a97b4432ae5f45e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sylius/resource": "0.11.*@dev"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sylius\\Component\\Taxation\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Jędrzejewski",
+                    "email": "pjedrzejewski@diweb.pl",
+                    "homepage": "http://pjedrzejewski.com"
+                },
+                {
+                    "name": "Sylius project",
+                    "homepage": "http://sylius.org"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "http://github.com/Sylius/Sylius/contributors"
+                }
+            ],
+            "description": "Flexible taxation system for PHP ecommerce applications.",
+            "homepage": "http://sylius.org",
+            "keywords": [
+                "ecommerce",
+                "inventory",
+                "shop",
+                "stock",
+                "sylius"
+            ],
+            "time": "2014-06-30 09:46:03"
+        },
+        {
+            "name": "sylius/taxonomy",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sylius/Taxonomy.git",
+                "reference": "6976348a688ad37881f80c59232a5f489ca1374d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sylius/Taxonomy/zipball/6976348a688ad37881f80c59232a5f489ca1374d",
+                "reference": "6976348a688ad37881f80c59232a5f489ca1374d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sylius/resource": "0.11.*@dev"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sylius\\Component\\Taxonomy\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Jędrzejewski",
+                    "email": "pjedrzejewski@diweb.pl",
+                    "homepage": "http://pjedrzejewski.com"
+                },
+                {
+                    "name": "Sylius project",
+                    "homepage": "http://sylius.org"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "http://github.com/Sylius/Sylius/contributors"
+                }
+            ],
+            "description": "Taxonomies - categorization of domain models in PHP projects.",
+            "homepage": "http://sylius.org",
+            "keywords": [
+                "categorization",
+                "classification",
+                "ecommerce",
+                "taxon",
+                "taxonomy"
+            ],
+            "time": "2014-07-15 11:11:15"
+        },
+        {
+            "name": "sylius/variation",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Sylius/Variation.git",
+                "reference": "98bfd689b71f905e64c017c568b70421d26f7591"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Sylius/Variation/zipball/98bfd689b71f905e64c017c568b70421d26f7591",
+                "reference": "98bfd689b71f905e64c017c568b70421d26f7591",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "sylius/resource": "0.11.*@dev"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.11-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Sylius\\Component\\Variation\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Paweł Jędrzejewski",
+                    "email": "pjedrzejewski@diweb.pl",
+                    "homepage": "http://pjedrzejewski.com"
+                },
+                {
+                    "name": "Sylius project",
+                    "homepage": "http://sylius.org"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "http://github.com/Sylius/Sylius/contributors"
+                }
+            ],
+            "description": "Object variants and options management for PHP.",
+            "homepage": "http://sylius.org",
+            "keywords": [
+                "ecommerce",
+                "options",
+                "product",
+                "products",
+                "shop",
+                "variants"
+            ],
+            "time": "2014-06-28 15:05:52"
         },
         {
             "name": "symfony/finder",
@@ -1273,9 +2513,9 @@
 
     ],
     "minimum-stability": "dev",
-    "stability-flags": [
-
-    ],
+    "stability-flags": {
+        "jeremy-dunn/php-fedex-api-wrapper": 20
+    },
     "platform": {
         "php": ">=5.5"
     },

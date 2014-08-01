@@ -18,6 +18,7 @@ class Cost implements CostInterface
 
         return $this;
     }
+
     public function getAmount()
     {
         return $this->amount;
