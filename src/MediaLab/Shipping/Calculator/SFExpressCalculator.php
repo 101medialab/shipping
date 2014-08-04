@@ -34,8 +34,8 @@ class SFExpressCalculator implements CalculatorInterface
         ) as $rate) {
             $estimations[] = (new Estimation())
                 ->setCarrier('S.F. Express')
-                ->setServiceName($rate['cargoTypeName'])
-                ->setServiceCode($rate['cargoTypeCode'])
+                ->setServiceName($this->getServiceName($rate))
+                ->setServiceCode($rate['limitTypeName'].' '.$rate['cargoTypeCode'])
                 ->setDeliveryDate(null === $rate['deliverTime'] ? null : new DateTime($rate['deliverTime']))
                 ->setCost((new Cost())
                     ->setCurrency($rate['currencyName'])
@@ -45,6 +45,23 @@ class SFExpressCalculator implements CalculatorInterface
         }
 
         return $estimations;
+    }
+    
+    private function getServiceName($rate)
+    {
+        $limitType = ucwords($rate['limitTypeName']);
+        $cargoType = '';
+        
+        switch ($rate['cargoTypeCode']) {
+            case 'C201': 
+                $cargoType = ' (Package)';
+            break;
+            case 'C1':
+                $cargoType = ' (File)';
+            break;
+        }
+        
+        return "$limitType$cargoType";
     }
 
     private function getRegionCode(AddressInterface $address)
