@@ -5,6 +5,7 @@ require_once 'bootstrap.php';
 $source = (new Sylius\Component\Addressing\Model\Address())
     ->setCountry((new Sylius\Component\Addressing\Model\Country())
         ->setName('Hong Kong')
+        ->setIsoName('HK')
         ->addProvince($province = (new Sylius\Component\Addressing\Model\Province())
             ->setName('New Territories')
         )
@@ -15,8 +16,10 @@ $source = (new Sylius\Component\Addressing\Model\Address())
 $destination = (new Sylius\Component\Addressing\Model\Address())
     ->setCountry((new Sylius\Component\Addressing\Model\Country())
         ->setName('China')
+        ->setIsoName('CN')
         ->addProvince($province = (new Sylius\Component\Addressing\Model\Province())
-            ->setName('Shenzhen City')
+            ->setName('Guangdong')
+            ->setIsoName('CN-44')
         )
     )
     ->setProvince($province)
@@ -25,4 +28,4 @@ $destination = (new Sylius\Component\Addressing\Model\Address())
 $calculator = new MediaLab\Shipping\Calculator\SFExpressCalculator();
 $cost = $calculator->calculate($source, $destination, $shippable);
 
-var_export($cost);
+var_dump($cost);
