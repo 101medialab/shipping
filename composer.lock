@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "45573613b18128fe859ac38e4b80ba85",
+    "hash": "cbb52ed7d272a47224d13ded9fab1676",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -680,53 +680,6 @@
             "time": "2014-01-03 11:19:15"
         },
         {
-            "name": "jeremy-dunn/php-fedex-api-wrapper",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JeremyDunn/php-fedex-api-wrapper.git",
-                "reference": "3aa5518f18ec89d4f688d7908cd4246d006e177e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JeremyDunn/php-fedex-api-wrapper/zipball/3aa5518f18ec89d4f688d7908cd4246d006e177e",
-                "reference": "3aa5518f18ec89d4f688d7908cd4246d006e177e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0",
-                "symfony/console": "2.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "FedEx": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jeremy Dunn",
-                    "email": "jeremy@jsdunn.info",
-                    "homepage": "http://www.jsdunn.info"
-                }
-            ],
-            "description": "API Wrapper for Fedex web services",
-            "homepage": "https://github.com/JeremyDunn/php-fedex-api-wrapper",
-            "keywords": [
-                "fedex",
-                "shipping",
-                "soap"
-            ],
-            "support": {
-                "source": "https://github.com/JeremyDunn/php-fedex-api-wrapper/tree/master",
-                "issues": "https://github.com/JeremyDunn/php-fedex-api-wrapper/issues"
-            },
-            "time": "2014-07-25 18:52:23"
-        },
-        {
             "name": "sylius/addressing",
             "version": "dev-master",
             "source": {
@@ -1195,6 +1148,55 @@
                 "reflection"
             ],
             "time": "2014-07-09 09:06:26"
+        },
+        {
+            "name": "umpirsky/php-fedex-api-wrapper",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/umpirsky/php-fedex-api-wrapper.git",
+                "reference": "0ada3b59bd53466bf839e9916f0e966a31b1bbb6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/umpirsky/php-fedex-api-wrapper/zipball/0ada3b59bd53466bf839e9916f0e966a31b1bbb6",
+                "reference": "0ada3b59bd53466bf839e9916f0e966a31b1bbb6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/console": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "FedEx": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Saša Stamenković",
+                    "email": "umpirsky@gmail.com",
+                    "homepage": "http://umpirsky.com"
+                },
+                {
+                    "name": "Jeremy Dunn",
+                    "email": "jeremy@jsdunn.info",
+                    "homepage": "http://www.jsdunn.info"
+                }
+            ],
+            "description": "API Wrapper for Fedex web services",
+            "homepage": "https://github.com/umpirsky/php-fedex-api-wrapper",
+            "keywords": [
+                "FedEx",
+                "shipping",
+                "soap"
+            ],
+            "time": "2014-08-19 14:45:09"
         },
         {
             "name": "winzou/state-machine",
@@ -2712,8 +2714,9 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "jeremy-dunn/php-fedex-api-wrapper": 20
+        "umpirsky/php-fedex-api-wrapper": 20
     },
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.5"
     },
