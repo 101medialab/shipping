@@ -40,7 +40,7 @@ class FedExCalculator implements CalculatorInterface
             )
         );
 
-        if ('SUCCESS' !== $result->HighestSeverity) {
+        if ('ERROR' === $result->HighestSeverity) {
             $message = '';
             if (is_array($result->Notifications)) {
                 foreach ($result->Notifications as $notification) {
@@ -69,7 +69,7 @@ class FedExCalculator implements CalculatorInterface
                     throw new CalculatorException('Failed to extract shipping cost.');
                 }
 
-                if ('RATED_ACCOUNT_PACKAGE' !== $details->RateType) {
+                if ($rateReplyDetails->ActualRateType !== $details->RateType) {
                     continue;
                 }
 
