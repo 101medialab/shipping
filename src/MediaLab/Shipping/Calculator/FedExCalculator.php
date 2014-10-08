@@ -56,36 +56,38 @@ class FedExCalculator implements CalculatorInterface
         }
 
         $estimations = [];
-        foreach ($result->RateReplyDetails as $rateReplyDetails) {
-            foreach ($rateReplyDetails->RatedShipmentDetails as $rateShipmentDetails) {
-                if (isset($rateShipmentDetails->TotalNetCharge)) {
-                    $details = $rateShipmentDetails;
-                    $charge = $details->TotalNetCharge;
-                } elseif (isset($rateShipmentDetails->ShipmentRateDetail)) {
-                    $details = $rateShipmentDetails->ShipmentRateDetail;
-                    $charge = $details->TotalNetCharge;
-                } elseif (isset($rateShipmentDetails->PackageRateDetail)) {
-                    $details = $rateShipmentDetails->PackageRateDetail;
-                    $charge = $details->NetCharge;
-                } else {
-                    throw new CalculatorException('Failed to extract shipping cost.');
+        
+        if (isset($result->RateReplyDetails)) {
+            foreach ($result->RateReplyDetails as $rateReplyDetails) {
+                foreach ($rateReplyDetails->RatedShipmentDetails as $rateShipmentDetails) {
+                    if (isset($rateShipmentDetails->TotalNetCharge)) {
+                        $details = $rateShipmentDetails;
+                        $charge = $details->TotalNetCharge;
+                    } elseif (isset($rateShipmentDetails->ShipmentRateDetail)) {
+                        $details = $rateShipmentDetails->ShipmentRateDetail;
+                        $charge = $details->TotalNetCharge;
+                    } elseif (isset($rateShipmentDetails->PackageRateDetail)) {
+                        $details = $rateShipmentDetails->PackageRateDetail;
+                        $charge = $details->NetCharge;
+                    } else {
+                        throw new CalculatorException('Failed to extract shipping cost.');
+                    }
+    
+                    if ($rateReplyDetails->ActualRateType !== $details->RateType) {
+                        continue;
+                    }
+    
+                    $estimations[] = (new Estimation())
+                        ->setCarrier('FedEx')
+                        ->setServiceName(Inflector::get()->humanize($rateReplyDetails->ServiceType))
+                        ->setServiceCode($rateReplyDetails->ServiceType)
+                        ->setDeliveryDate(isset($rateReplyDetails->DeliveryTimestamp) ? new DateTime($rateReplyDetails->DeliveryTimestamp) : null)
+                        ->setCost((new Cost())
+                            ->setCurrency($charge->Currency)
+                            ->setAmount($charge->Amount)
+                        )
+                    ;
                 }
-
-                if ($rateReplyDetails->ActualRateType !== $details->RateType) {
-                    continue;
-                }
-
-                $estimations[] = (new Estimation())
-                    ->setCarrier('FedEx')
-                    ->setServiceName(Inflector::get()->humanize($rateReplyDetails->ServiceType))
-                    ->setServiceCode($rateReplyDetails->ServiceType)
-                    ->setDeliveryDate(isset($rateReplyDetails->DeliveryTimestamp) ? new DateTime($rateReplyDetails->DeliveryTimestamp) : null)
-                    ->setCost((new Cost())
-                        ->setCurrency($charge->Currency)
-                        ->setAmount($charge->Amount)
-                    )
-                ;
-
             }
         }
 
