@@ -10,17 +10,11 @@
             "homepage": "http://101medialab.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/JeremyDunn/php-fedex-api-wrapper"
-        }
-    ],
     "require": {
         "php": ">=5.5",
         "sylius/shipping": "~0.11",
         "sylius/addressing": "~0.11",
-        "jeremy-dunn/php-fedex-api-wrapper": "dev-master",
+        "umpirsky/php-fedex-api-wrapper": "dev-master",
         "icanboogie/inflector": "1.2",
         "guzzle/http": "~3.9"
     },

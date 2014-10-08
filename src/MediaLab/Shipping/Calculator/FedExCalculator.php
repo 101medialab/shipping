@@ -17,18 +17,20 @@ class FedExCalculator implements CalculatorInterface
     private $password;
     private $accountNumber;
     private $meterNumber;
+    private $beta;
 
-    public function __construct($key, $password, $accountNumber, $meterNumber)
+    public function __construct($key, $password, $accountNumber, $meterNumber, $beta = true)
     {
         $this->key = $key;
         $this->password = $password;
         $this->accountNumber = $accountNumber;
         $this->meterNumber = $meterNumber;
+        $this->beta = $beta;
     }
 
     public function calculate(AddressInterface $origin, AddressInterface $destination, ShippableInterface $shippable)
     {
-        $result = (new Request())->getGetRatesReply(
+        $result = (new Request($this->beta))->getGetRatesReply(
             Factory::createRateRequest(
                 $origin,
                 $destination,

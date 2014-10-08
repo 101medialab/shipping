@@ -52,7 +52,7 @@ class Factory
             // )
             ->setVersion((new VersionId())
                 ->setServiceId('crs')
-                ->setMajor(10)
+                ->setMajor(14)
                 ->setIntermediate(0)
                 ->setMinor(0)
             )
@@ -74,11 +74,8 @@ class Factory
             ->setDropoffType(DropoffType::_REGULAR_PICKUP)
             ->setShipTimestamp(date('c'))
             ->setShipper(self::createParty($origin))
-            ->setRecipient(self::createParty($destination))
-            ->setShippingChargesPayment(self::createPayment(
-                $accountNumber,
-                $origin->getCountry()->getIsoName()
-            ))
+            ->setRecipient($recipient = self::createParty($destination))
+            ->setShippingChargesPayment(self::createPayment($recipient))
             // ->setRateRequestTypes([
             //     new RateRequestType(RateRequestType::_ACCOUNT),
             //     new RateRequestType(RateRequestType::_LIST)
@@ -115,19 +112,18 @@ class Factory
         );
     }
 
-    public static function createPayor($accountNumber, $countryIsoName)
+    public static function createPayor(Party $party)
     {
         return (new Payor())
-            ->setAccountNumber($accountNumber)
-            ->setCountryCode($countryIsoName)
+            ->setResponsibleParty($party)
         ;
     }
 
-    public static function createPayment($accountNumber, $countryIsoName)
+    public static function createPayment(Party $party)
     {
         return (new Payment())
             ->setPaymentType(new PaymentType(PaymentType::_SENDER))
-            ->setPayor(self::createPayor($accountNumber, $countryIsoName))
+            ->setPayor(self::createPayor($party))
         ;
     }
 
